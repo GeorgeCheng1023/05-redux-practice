@@ -18,7 +18,6 @@ const Counter = () => {
   const decrementHandler = () => {
     dispatch(counterActions.decrement())
   }
-  console.log(show)
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
