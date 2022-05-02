@@ -6,7 +6,8 @@ const Header = () => {
   const dispatch = useDispatch()
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated)
 
-  const logoutHandler = () => {
+  const logoutHandler = (event) => {
+    event.preventDefault();
     dispatch(authActions.logout())
     console.log(isAuthenticated)
   }
