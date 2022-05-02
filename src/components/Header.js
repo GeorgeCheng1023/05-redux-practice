@@ -1,6 +1,6 @@
 import classes from './Header.module.css';
 import {useDispatch, useSelector} from 'react-redux';
-import {authActions} from '../store/index'
+import {authActions} from '../store/authSlice'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -9,7 +9,6 @@ const Header = () => {
   const logoutHandler = (event) => {
     event.preventDefault();
     dispatch(authActions.logout())
-    console.log(isAuthenticated)
   }
 
   return (
